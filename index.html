@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NeoShadow</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -53,6 +52,23 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
+
+    /* Responsive para pantallas pequeñas */
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      section {
+        padding: 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -99,7 +115,7 @@
   <section id="contacto">
     <h2>Contáctanos</h2>
     <p>¿Tienes un problema o quieres una cotización? Escríbenos directo por WhatsApp o por correo.</p>
-    <p><strong>WhatsApp:</strong> [Tu número aquí]</p>
+    <p><strong>WhatsApp:</strong> +593963290521</p>
     <p><strong>Correo:</strong> [Tu correo aquí]</p>
     <p><strong>Zona de atención:</strong> [Ciudad / Provincia]</p>
   </section>
@@ -107,5 +123,27 @@
   <footer>
     <p>&copy; 2025 NeoShadow. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- Botón WhatsApp flotante -->
+  <a href="https://wa.me/593963290521" target="_blank" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+  ">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32px" height="32px">
+      <path d="M20.52 3.48a11.75 11.75 0 00-16.6 0 11.64 11.64 0 00-3.48 8.3c0 2.3.7 4.55 2.03 6.38L2 22l4.1-1.08a11.64 11.64 0 006.33 1.73h.01a11.75 11.75 0 008.08-19.07zM12 20a8 8 0 01-4.28-1.17l-.31-.18-2.44.64.65-2.38-.2-.31A7.94 7.94 0 014 12a8 8 0 0113.65-5.48 7.94 7.94 0 01-5.65 13.48zm3.08-5.44c-.18-.09-1.06-.52-1.22-.58-.16-.06-.27-.09-.38.09s-.44.58-.54.7c-.1.12-.2.14-.37.05a5.75 5.75 0 01-1.69-1.05 6.42 6.42 0 01-1.19-1.48c-.13-.21-.01-.32.09-.41.09-.09.2-.24.3-.36a1.4 1.4 0 00.2-.35c.07-.12 0-.22-.02-.3-.03-.09-.37-.88-.52-1.2-.14-.32-.28-.28-.38-.28-.1 0-.22 0-.34 0-.12 0-.31.04-.48.23-.16.19-.62.6-.62 1.46 0 .86.64 1.69.73 1.81.1.12 1.26 1.92 3.05 2.7a10.45 10.45 0 001.41.6c.6.24 1.14.2 1.57.12.48-.1 1.46-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.05-.1-.18-.16-.37-.26z"/>
+    </svg>
+  </a>
 </body>
 </html>
