@@ -3,52 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NeoShadow</title>
+  <meta name="description" content="Soporte técnico y soluciones eléctricas en Ecuador. Confiabilidad, precisión y tecnología con NeoShadow.">
+  <meta name="theme-color" content="#6b21a8" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>NeoShadow - Soporte Técnico & Electricidad</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  
-  <!-- Configuración de colores personalizados para Tailwind -->
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#6b21a8', // morado intenso
-            secondary: '#a78bfa', // morado claro
+            primary: '#6b21a8',
+            secondary: '#a78bfa',
             whatsapp: '#25d366',
+          },
+          fontFamily: {
+            roboto: ['Roboto', 'sans-serif'],
           }
         }
       }
     }
   </script>
-  
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-primary text-white font-roboto min-h-screen flex flex-col">
 
-  <header class="bg-primary/90 shadow-md py-6 text-center">
+  <header class="bg-primary/90 shadow-md py-6 text-center" role="banner">
     <h1 class="text-4xl font-bold tracking-wide">NeoShadow</h1>
-    <p class="mt-2 text-purple-300">Confiabilidad, precisión y tecnología a tu alcance</p>
+    <p class="mt-2 text-purple-200 text-lg">Confiabilidad, precisión y tecnología a tu alcance</p>
   </header>
 
-  <nav class="bg-primary/80 shadow-inner py-3 flex justify-center space-x-8 text-lg font-medium">
-    <a href="#inicio" class="hover:text-secondary transition">Inicio</a>
-    <a href="#servicios" class="hover:text-secondary transition">Servicios</a>
-    <a href="#nosotros" class="hover:text-secondary transition">Sobre Nosotros</a>
-    <a href="#contacto" class="hover:text-secondary transition">Contacto</a>
+  <nav class="bg-primary/80 py-3 flex justify-center space-x-6 text-lg font-medium shadow-inner" role="navigation" aria-label="Menú principal">
+    <a href="#inicio" class="hover:text-secondary transition-colors">Inicio</a>
+    <a href="#servicios" class="hover:text-secondary transition-colors">Servicios</a>
+    <a href="#nosotros" class="hover:text-secondary transition-colors">Sobre Nosotros</a>
+    <a href="#contacto" class="hover:text-secondary transition-colors">Contacto</a>
   </nav>
 
-  <main class="flex-grow px-6 md:px-20 py-10 max-w-5xl mx-auto space-y-16">
+  <main class="flex-grow px-6 md:px-20 py-10 max-w-5xl mx-auto space-y-20">
 
-    <section id="inicio" class="space-y-4">
-      <h2 class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Bienvenido a NeoShadow</h2>
-      <p class="text-purple-200 max-w-3xl leading-relaxed">
+    <section id="inicio" class="space-y-5" aria-labelledby="titulo-inicio">
+      <h2 id="titulo-inicio" class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Bienvenido a NeoShadow</h2>
+      <p class="text-purple-200 leading-relaxed max-w-3xl">
         Somos una empresa joven especializada en soporte técnico de computadoras e instalaciones eléctricas. Ayudamos a hogares y negocios a mantenerse conectados, actualizados y seguros.
       </p>
     </section>
 
-    <section id="servicios" class="space-y-8">
-      <h2 class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Servicios</h2>
+    <section id="servicios" class="space-y-10" aria-labelledby="titulo-servicios">
+      <h2 id="titulo-servicios" class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Servicios</h2>
 
       <div class="grid md:grid-cols-2 gap-10">
         <div>
@@ -72,16 +77,16 @@
       </div>
     </section>
 
-    <section id="nosotros" class="space-y-4">
-      <h2 class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Sobre Nosotros</h2>
+    <section id="nosotros" class="space-y-5" aria-labelledby="titulo-nosotros">
+      <h2 id="titulo-nosotros" class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Sobre Nosotros</h2>
       <p class="text-purple-200 max-w-3xl leading-relaxed">
         NeoShadow nace con la misión de brindar soluciones confiables en tecnología y electricidad. Somos técnicos apasionados por el buen servicio y el trabajo bien hecho. Nos enfocamos en cada detalle para que el cliente siempre quede satisfecho.
       </p>
     </section>
 
-    <section id="contacto" class="space-y-4">
-      <h2 class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Contáctanos</h2>
-      <p class="text-purple-200 max-w-3xl leading-relaxed">
+    <section id="contacto" class="space-y-5" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto" class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Contáctanos</h2>
+      <p class="text-purple-200 leading-relaxed max-w-3xl">
         ¿Tienes un problema o quieres una cotización? Escríbenos directo por WhatsApp o por correo.
       </p>
       <ul class="space-y-2 text-purple-100">
@@ -93,19 +98,12 @@
 
   </main>
 
-  <footer class="bg-primary/90 text-center py-5 text-purple-300 text-sm">
+  <footer class="bg-primary/90 text-center py-5 text-purple-300 text-sm" role="contentinfo">
     &copy; 2025 NeoShadow. Todos los derechos reservados.
   </footer>
 
   <!-- Botón WhatsApp flotante -->
-  <a href="https://wa.me/593963290521" target="_blank"
-    class="fixed bottom-6 right-6 bg-whatsapp hover:bg-green-600 shadow-lg rounded-full w-16 h-16 flex items-center justify-center transition duration-300 z-50"
-    aria-label="WhatsApp">
+  <a href="https://wa.me/593963290521" target="_blank" aria-label="Chatea con nosotros por WhatsApp"
+    class="fixed bottom-6 right-6 bg-whatsapp hover:bg-green-600 shadow-lg rounded-full w-16 h-16 flex items-center justify-center transition duration-300 z-50">
     <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="28" height="28">
-      <path d="M20.52 3.48a11.75 11.75 0 00-16.6 0 11.64 11.64 0 00-3.48 8.3c0 2.3.7 4.55 2.03 6.38L2 22l4.1-1.08a11.64 11.64 0 006.33 1.73h.01a11.75 11.75 0 008.08-19.07zM12 20a8 8 0 01-4.28-1.17l-.31-.18-2.44.64.65-2.38-.2-.31A7.94 7.94 0 014 12a8 8 0 0113.65-5.48 7.94 7.94 0 01-5.65 13.48zm3.08-5.44c-.18-.09-1.06-.52-1.22-.58-.16-.06-.27-.09-.38.09s-.44.58-.54.7c-.1.12-.2.14-.37.05a5.75 5.75 0 01-1.69-1.05 6.42 6.42 0 01-1.19-1.48c-.13-.21-.01-.32.09-.41.09-.09.2-.24.3-.36a1.4 1.4 0 00.2-.35c.07-.12 0-.22-.02-.3-.03-.09-.37-.88-.52-1.2-.14-.32-.28-.28-.38-.28-.1 0-.22 0-.34 0-.12 0-.31.04-.48.23-.16.19-.62.6-.62 1.46 0 .86.64 1.69.73 1.81.1.12 1.26 1.92 3.05 2.7a10.45 10.45 0 001.41.6c.6.24 1.14.2 1.57.12.48-.1 1.46-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.05-.1-.18-.16-.37-.26z"/>
-    </svg>
-  </a>
-
-</body>
-</html>
-
+      <path d="M20.52 3.48a11.75 11.75 0 00-16.6 0 11.64 11.64 0 00-3.48 8.3c0 2.3.7 4.55 2.03 6.38L2 22l4.1-1.08a11.64 11.64 0 006.33 1.73h.01a11.75 11.75 0 008.08-19.07zM12 20a8 8 0 01-4.28-1.17l-.31-.18-2.44.64.65-2.38-.2-.31A7.94 7.94 0 014 12a8 8 0 0113.65-5.48 7.94 7.94 0 01-5.65 13.48zm3.08-5.44c-.18-.09-1.06-.52-1.22-.58-.16-.06-.27-.09-.38.09s-.44.58-.54.7c-.1.12-.2.14-.37.05a5.75 5.75 0 01-1.69-1.05 6.42 6.42 0 01-1.19-1.48c-.13-.21-.01-.32.09-.41.09-.09.2-.24.3-.36a1.4 1.4 0 00.2-.35c.07-.12 0-.22-.02-.3-.03-.09-.37-.88-.52-1.2-.14-.32-.
