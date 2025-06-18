@@ -4,146 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NeoShadow</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
-    body {
-      background-color: #0e0e1a;
-      color: #e0e0f0;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #4a007a;
-      padding: 1rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-    }
-    nav {
-      background-color: #33004d;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    section {
-      padding: 2rem;
-    }
-    .services ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .services li {
-      margin-bottom: 0.5rem;
-    }
-    footer {
-      background-color: #220033;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-
-    /* Responsive para pantallas pequeñas */
-    @media (max-width: 768px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-      section {
-        padding: 1rem;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-      nav {
-        padding: 1rem;
+    /* Personalizar tonos morados con Tailwind config inline */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6b21a8', /* morado intenso */
+            secondary: '#a78bfa', /* morado claro */
+            whatsapp: '#25d366',
+          }
+        }
       }
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>NeoShadow</h1>
-    <p>Confiabilidad, precisión y tecnología a tu alcance</p>
+<body class="bg-primary text-white font-roboto min-h-screen flex flex-col">
+
+  <header class="bg-primary/90 shadow-md py-6 text-center">
+    <h1 class="text-4xl font-bold tracking-wide">NeoShadow</h1>
+    <p class="mt-2 text-purple-300">Confiabilidad, precisión y tecnología a tu alcance</p>
   </header>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#nosotros">Sobre Nosotros</a>
-    <a href="#contacto">Contacto</a>
+  <nav class="bg-primary/80 shadow-inner py-3 flex justify-center space-x-8 text-lg font-medium">
+    <a href="#inicio" class="hover:text-secondary transition">Inicio</a>
+    <a href="#servicios" class="hover:text-secondary transition">Servicios</a>
+    <a href="#nosotros" class="hover:text-secondary transition">Sobre Nosotros</a>
+    <a href="#contacto" class="hover:text-secondary transition">Contacto</a>
   </nav>
 
-  <section id="inicio">
-    <h2>Bienvenido a NeoShadow</h2>
-    <p>Somos una empresa joven especializada en soporte técnico de computadoras e instalaciones eléctricas. Ayudamos a hogares y negocios a mantenerse conectados, actualizados y seguros.</p>
-  </section>
+  <main class="flex-grow px-6 md:px-20 py-10 max-w-5xl mx-auto space-y-16">
 
-  <section id="servicios" class="services">
-    <h2>Servicios</h2>
-    <h3>Soporte Técnico</h3>
-    <ul>
-      <li>Reparación de computadoras</li>
-      <li>Formateo y limpieza de sistema</li>
-      <li>Armado de PC personalizadas</li>
-      <li>Mantenimiento preventivo y correctivo</li>
-      <li>Actualización de componentes</li>
-    </ul>
-    <h3>Instalaciones Eléctricas</h3>
-    <ul>
-      <li>Instalaciones básicas residenciales y comerciales</li>
-      <li>Reparación de fallas eléctricas</li>
-      <li>Automatización del hogar (domótica)</li>
-    </ul>
-  </section>
+    <section id="inicio" class="space-y-4">
+      <h2 class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Bienvenido a NeoShadow</h2>
+      <p class="text-purple-200 max-w-3xl leading-relaxed">
+        Somos una empresa joven especializada en soporte técnico de computadoras e instalaciones eléctricas. Ayudamos a hogares y negocios a mantenerse conectados, actualizados y seguros.
+      </p>
+    </section>
 
-  <section id="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>NeoShadow nace con la misión de brindar soluciones confiables en tecnología y electricidad. Somos técnicos apasionados por el buen servicio y el trabajo bien hecho. Nos enfocamos en cada detalle para que el cliente siempre quede satisfecho.</p>
-  </section>
+    <section id="servicios" class="space-y-8">
+      <h2 class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Servicios</h2>
 
-  <section id="contacto">
-    <h2>Contáctanos</h2>
-    <p>¿Tienes un problema o quieres una cotización? Escríbenos directo por WhatsApp o por correo.</p>
-    <p><strong>WhatsApp:</strong> +593963290521</p>
-    <p><strong>Correo:</strong> [Tu correo aquí]</p>
-    <p><strong>Zona de atención:</strong> [Ciudad / Provincia]</p>
-  </section>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h3 class="text-2xl font-semibold mb-3 text-secondary">Soporte Técnico</h3>
+          <ul class="list-disc list-inside space-y-1 text-purple-100">
+            <li>Reparación de computadoras</li>
+            <li>Formateo y limpieza de sistema</li>
+            <li>Armado de PC personalizadas</li>
+            <li>Mantenimiento preventivo y correctivo</li>
+            <li>Actualización de componentes</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-3 text-secondary">Instalaciones Eléctricas</h3>
+          <ul class="list-disc list-inside space-y-1 text-purple-100">
+            <li>Instalaciones básicas residenciales y comerciales</li>
+            <li>Reparación de fallas eléctricas</li>
+            <li>Automatización del hogar (domótica)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 NeoShadow. Todos los derechos reservados.</p>
+    <section id="nosotros" class="space-y-4">
+      <h2 class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Sobre Nosotros</h2>
+      <p class="text-purple-200 max-w-3xl leading-relaxed">
+        NeoShadow nace con la misión de brindar soluciones confiables en tecnología y electricidad. Somos técnicos apasionados por el buen servicio y el trabajo bien hecho. Nos enfocamos en cada detalle para que el cliente siempre quede satisfecho.
+      </p>
+    </section>
+
+    <section id="contacto" class="space-y-4">
+      <h2 class="text-3xl font-extrabold border-b-4 border-secondary inline-block pb-1">Contáctanos</h2>
+      <p class="text-purple-200 max-w-3xl leading-relaxed">
+        ¿Tienes un problema o quieres una cotización? Escríbenos directo por WhatsApp o por correo.
+      </p>
+      <ul class="space-y-2 text-purple-100">
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/593963290521" target="_blank" class="text-secondary hover:underline">+593 96 329 0521</a></li>
+        <li><strong>Correo:</strong> <a href="mailto:tu-correo@ejemplo.com" class="text-secondary hover:underline">tu-correo@ejemplo.com</a></li>
+        <li><strong>Zona de atención:</strong> [Ciudad / Provincia]</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="bg-primary/90 text-center py-5 text-purple-300 text-sm">
+    &copy; 2025 NeoShadow. Todos los derechos reservados.
   </footer>
 
   <!-- Botón WhatsApp flotante -->
-  <a href="https://wa.me/593963290521" target="_blank" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    z-index: 1000;
-  ">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32px" height="32px">
+  <a href="https://wa.me/593963290521" target="_blank"
+    class="fixed bottom-6 right-6 bg-whatsapp hover:bg-green-600 shadow-lg rounded-full w-16 h-16 flex items-center justify-center transition duration-300 z-50"
+    aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="28" height="28">
       <path d="M20.52 3.48a11.75 11.75 0 00-16.6 0 11.64 11.64 0 00-3.48 8.3c0 2.3.7 4.55 2.03 6.38L2 22l4.1-1.08a11.64 11.64 0 006.33 1.73h.01a11.75 11.75 0 008.08-19.07zM12 20a8 8 0 01-4.28-1.17l-.31-.18-2.44.64.65-2.38-.2-.31A7.94 7.94 0 014 12a8 8 0 0113.65-5.48 7.94 7.94 0 01-5.65 13.48zm3.08-5.44c-.18-.09-1.06-.52-1.22-.58-.16-.06-.27-.09-.38.09s-.44.58-.54.7c-.1.12-.2.14-.37.05a5.75 5.75 0 01-1.69-1.05 6.42 6.42 0 01-1.19-1.48c-.13-.21-.01-.32.09-.41.09-.09.2-.24.3-.36a1.4 1.4 0 00.2-.35c.07-.12 0-.22-.02-.3-.03-.09-.37-.88-.52-1.2-.14-.32-.28-.28-.38-.28-.1 0-.22 0-.34 0-.12 0-.31.04-.48.23-.16.19-.62.6-.62 1.46 0 .86.64 1.69.73 1.81.1.12 1.26 1.92 3.05 2.7a10.45 10.45 0 001.41.6c.6.24 1.14.2 1.57.12.48-.1 1.46-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.05-.1-.18-.16-.37-.26z"/>
     </svg>
   </a>
+
 </body>
 </html>
