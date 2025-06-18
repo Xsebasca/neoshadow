@@ -5,21 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NeoShadow</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- Tailwind CDN -->
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: '#6b21a8',
-          secondary: '#a78bfa',
-          whatsapp: '#25d366',
+  
+  <!-- Configuración de colores personalizados para Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6b21a8', // morado intenso
+            secondary: '#a78bfa', // morado claro
+            whatsapp: '#25d366',
+          }
         }
       }
     }
-  }
-</script>
-
+  </script>
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-primary text-white font-roboto min-h-screen flex flex-col">
 
@@ -105,4 +108,4 @@
 
 </body>
 </html>
- 
+
